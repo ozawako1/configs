@@ -1,0 +1,40 @@
+{
+  "title": "Windows on AmazonWorkspaces in US Keyboard.",
+  "conditions": [
+    {
+      "type": "frontmost_application_if",
+      "bundle_identifiers": [
+        "^com\\.amazon\\.workspaces"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "description": "Command to Control in AmazonWorkspaces",
+      "manipulators": [
+        {
+            "type": "basic",
+            "from": {
+              "key_code": "left_command"
+            },
+            "to": [
+              {
+                "key_code": "left_control"
+              }
+            ]
+        },
+        {
+            "type": "basic",
+            "from": {
+              "key_code": "right_command"
+            },
+            "to": [
+              {
+                "key_code": "right_control"
+              }
+            ]
+          }
+      ]
+    }
+  ]
+}
